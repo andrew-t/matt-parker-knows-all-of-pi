@@ -4,6 +4,7 @@ import { openMouth } from './face.js';
 const sound = new Audio('sound.ogg');
 
 const clips = {
+	piIsExactly: { from: 10.150, to: 11.692 },
 	0: { from: 0, to: 0.603 },
 	1: { from: 0.975, to: 1.661 },
 	2: { from: 1.811, to: 2.873 },
@@ -36,6 +37,7 @@ function playClip(clip) {
 const start = document.getElementById('start');
 start.addEventListener('click', async e => {
 	document.body.removeChild(start);
+	await sayDigit('piIsExactly');
 	await sayDigit(nextDigit());
 	await sayDigit('point');
 	while (true) await sayDigit(nextDigit());

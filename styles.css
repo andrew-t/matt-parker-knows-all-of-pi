@@ -1,5 +1,14 @@
 /* The image is scaled to 33.3% and is 652x839 */
 
+body { overflow: hidden; }
+a {
+	position: absolute;
+	font-size: 3vw;
+	right: 1em;
+	bottom: 1em;
+	z-index: 99999;
+}
+
 #start {
 	position: absolute;
 	font-size: 10vw;
