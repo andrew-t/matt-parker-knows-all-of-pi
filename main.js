@@ -1,5 +1,5 @@
 import nextDigit from "./pi.js";
-import { openMouth, closeMouth } from './face.js';
+import { openMouth } from './face.js';
 
 const sound = new Audio('sound.ogg');
 

@@ -6,11 +6,6 @@ document.addEventListener('DOMContentLoaded', e => {
 	lowerJaw = document.getElementById('face-lower');
 });
 
-export function closeMouth() {
-	upperJaw.style.transform = 'none';
-	lowerJaw.style.transform = 'none';
-}
-
 export function openMouth() {
 	upperJaw.style.transform = randomJawMotion(-1, -8);
 	lowerJaw.style.transform = randomJawMotion(0, 3);
