@@ -1,0 +1,69 @@
+/* The image is scaled to 33.3% and is 652x839 */
+
+#start {
+	position: absolute;
+	font-size: 10vw;
+	width: 8em;
+	height: 2em;
+	line-height: 2em;
+	left: 1em;
+	bottom: 1em;
+	z-index: 100000;
+}
+
+.world {
+	position: absolute;
+	height: 100vmin;
+	width: 100vmin;
+	top: 0;
+	left: calc(50vw - 50vmin);
+	z-index: 1;
+	transition: filter 600ms;
+}
+
+.face-container {
+	position: absolute;
+	height: 80%;
+	top: 15%;
+	width: 62.17%;
+	right: 0;
+	mouse-events: none;
+}
+.upper-container {
+	z-index: 4;
+}
+.lower-container {
+	z-index: 2;
+}
+
+#face-upper,
+#face-lower {
+	margin: 0;
+	padding: 0;
+	border: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background: url('matt.png');
+	background-size: cover;
+	transition: transform 200ms;
+}
+#face-upper {
+	top: 0;
+	height: 77%;
+	background-position: 50% 0%;
+	transform-origin: 50% 100%;
+}
+#face-lower {
+	top: calc(77% - 1px);
+	bottom: 0;
+	background-position: 50% 100%;
+	transform-origin: 50% 0%;
+}
+
+/* Responsive */
+@media (min-aspect-ratio: 3/2) {
+	.world {
+		left: calc(50vw - 37.5vmin);
+	}
+}
